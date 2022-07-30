@@ -1,0 +1,32 @@
+{
+  "name": "my-script",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.6.2",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "lint": "eslint '**/*.{js,ts}' --fix",
+    "prettier": "prettier --write .",
+    "build": "yarn tsc && yarn chmod",
+    "chmod": "chmod u+x ./bin/src/index.js"
+  },
+  "bin": {
+    "my-script": "./bin/src/index.js"
+  },
+  "dependencies": {
+    "chalk": "4.1.2",
+    "commander": "^9.4.0",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4"
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "user_id": "4a1b84f7-9756-4549-837e-9574c7ffc142",
+    "timestamp": "1970-01-01T00:00:00.000Z",
+    "currency": "GBP",
+    "amount": "+12.00"
+  },
+  {
+    "user_id": "4a1b84f7-9756-4549-837e-9574c7ffc142",
+    "timestamp": "1970-01-01T00:00:00.000Z",
+    "currency": "USD",
+    "amount": "-12.00"
+  },
+  {
+    "user_id": "faf4a6fe-c839-4ee3-ac11-ee3957ac6332",
+    "timestamp": "1970-01-01T00:00:00.000Z",
+    "currency": "EUR",
+    "amount": "-3.99"
+  }
+]
