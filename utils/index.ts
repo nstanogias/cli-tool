@@ -4,15 +4,27 @@ import 'moment/locale/en-gb';
 
 moment.locale('en-gb');
 
+const isTransaction = (obj: any): obj is Transaction => {
+  return (
+    'user_id' in obj &&
+    'timestamp' in obj &&
+    'currency' in obj &&
+    'amount' in obj
+  );
+};
+
 export const isInputValidFormat = (
-  data: unknown[],
+  data: unknown,
 ): { valid: boolean; msg: string } => {
   if (!Array.isArray(data)) {
     return { valid: false, msg: 'input should be an array' };
   }
-  // data.forEach((elem) => {
-  //   if elem
-  // })
+  if (data.some((value) => !isTransaction(value))) {
+    return {
+      valid: false,
+      msg: 'invalid input. Transaction properties are missing',
+    };
+  }
   return { valid: true, msg: 'all good!' };
 };
 
