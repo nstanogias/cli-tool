@@ -4,7 +4,7 @@ import 'moment/locale/en-gb';
 
 moment.locale('en-gb');
 
-const isTransaction = (obj: any): obj is Transaction => {
+export const isTransaction = (obj: any): obj is Transaction => {
   return (
     'user_id' in obj &&
     'timestamp' in obj &&
@@ -31,7 +31,6 @@ export const isInputValidFormat = (
 export const groupTransactionsByUserId = (
   transactions: Transaction[],
 ): GroupedTransactions => {
-  console.log(transactions);
   const res = transactions.reduce((acc, curr) => {
     const key = curr.user_id;
     if (!acc[key]) {
