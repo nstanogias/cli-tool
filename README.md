@@ -37,6 +37,16 @@ my-script ./transactions.json
 and see the following output printed in the console
 ![Screenshot](screenshot.png)
 
+## Testing
+
+The main processing logic as well as the utility functions are covered by tests.
+
+You can run them by executing the command:
+
+```bash
+npm run test
+```
+
 ## Libraries used
 
 - Commander (Helpful tool to parse arguments and display usage errors)
