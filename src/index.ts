@@ -2,9 +2,9 @@
 
 import chalk from 'chalk';
 import { Command } from 'commander';
-import { groupTransactionsByUserId, isInputValidFormat } from '../utils';
+import { groupTransactionsByUserId, isInputValidFormat } from './utils';
 import fs from 'fs';
-import { Currency, GroupedTransactions } from '../types';
+import { Currency, GroupedTransactions } from './types';
 
 async function run() {
   const program = new Command();
